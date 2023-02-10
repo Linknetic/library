@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  linknetic-library:
+    container_name: linknetic-library
+    image: linknetic/library:0.1
+    build:
+      context: .
+      dockerfile: ./php-cli/Dockerfile
+    working_dir: /app
+    volumes:
+      - ../:/app
+    tty: true
+    stdin_open: true
+    networks:
+      - default_network
+
+networks:
+  default_network:
+    driver: bridge
+    name: carlonicora
