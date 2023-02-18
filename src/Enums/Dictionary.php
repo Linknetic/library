@@ -5,6 +5,9 @@ use CarloNicora\Minimalism\Interfaces\DictionaryInterface;
 
 enum Dictionary: string implements DictionaryInterface
 {
+    case Format='format';
+    case Level='level';
+    case Area='area';
     case User='user';
     case Course='course';
     case Module='module';
@@ -19,6 +22,9 @@ enum Dictionary: string implements DictionaryInterface
             self::Module => 'modules',
             self::Subject => 'subjects',
             self::CourseType => 'coursetypes',
+            self::Format => 'formats',
+            self::Level => 'levels',
+            self::Area => 'areas',
         };
     }
 
@@ -31,6 +37,9 @@ enum Dictionary: string implements DictionaryInterface
             self::Module => 'moduleId',
             self::Subject => 'subjectId',
             self::CourseType => 'courseTypeId',
+            self::Format => 'formatId',
+            self::Level => 'levelId',
+            self::Area => 'areaId',
         };
     }
 
